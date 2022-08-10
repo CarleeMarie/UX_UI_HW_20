@@ -1,0 +1,158 @@
+Delivered-To: carlee.miller@gmail.com
+Received: by 2002:a59:b10d:0:b0:2d7:82e:2a6c with SMTP id o13csp3137149vqn;
+        Tue, 9 Aug 2022 07:22:45 -0700 (PDT)
+X-Google-Smtp-Source: AA6agR789jKMhjHzs7h6rTbZaTwX17wU3+lxzE50HGZ8h4aQf5qi17iAqAdsCwLx21bM4pp5UexC
+X-Received: by 2002:a81:36c3:0:b0:31e:6899:dd7b with SMTP id d186-20020a8136c3000000b0031e6899dd7bmr23596152ywa.205.1660054965577;
+        Tue, 09 Aug 2022 07:22:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1660054965; cv=none;
+        d=google.com; s=arc-20160816;
+        b=uIQbWcWQ/+W4frV7FML8+0dOrSVgtYo354GV4SRtw+0ZmfzdYbkef1OOPMdAvUHC1M
+         OReVFcCGRT2uPJtx+o+8ZXx2Np7mU1PPElk+0S+38wkyQE1fYQ7vnOjL8Rw+hH8ke9iP
+         yFtQzmGRNFoKQ8FsUCfmsFiasmtZPAPfE5HCM0uk741VA/brkbCzEQZgX2lIMi76JqLS
+         AHVWpR8Z10dsqDEq9XV0EPcTgDWMUO9tVh9LH02txpWWWlH1BBY3D/+znRsv2YtJLWQD
+         7tGLPmG4hSrMufA3E2ocAJY+vof/9j75YHg8pDdxmpZgBPXOcfioWK3vFeLk49mDgW9p
+         PmCg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:dkim-signature;
+        bh=YAVd6bpy2dQzbeKY89TQQcdL1C+ermXAVArX2Bk3JO0=;
+        b=i3m+1yrYKfDwuycWTW+bpurk0Un0j3cGbmF77qoupTzPWIg5HSykBy5MLy3fJNn+yR
+         bkGaR3thT9OUiIT+rcMbrgWKoSmPdiXZSAaDXmRmb5Ix/yvrVco/Rjpfz5I1w9S1BbE3
+         Eu7xIF9nTGJeQE1wPoup+LCcwjFg4iP0eyoZ4pVvCIaJ6HDxBjsBvSOUyTI0UAnCa0ID
+         ssGS65eDfaRVWK3vsgIcF7ughPdEx0gv2RxglCIN3VFQhQzrGtZ2RaBF7nbNC8xRMl7T
+         wWClFzb9GyeDSvIUKC21fqyxtGzCtHO4vDjwNy64IKPs5IZLBnGSK31hjR/VNdySI8fN
+         ipKw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=jgnscQNl;
+       spf=pass (google.com: domain of catherinebartholome@yahoo.com designates 66.163.189.146 as permitted sender) smtp.mailfrom=catherinebartholome@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <catherinebartholome@yahoo.com>
+Received: from sonic314-20.consmr.mail.ne1.yahoo.com (sonic314-20.consmr.mail.ne1.yahoo.com. [66.163.189.146])
+        by mx.google.com with ESMTPS id p22-20020a254216000000b0067a6baa9112si11905164yba.403.2022.08.09.07.22.45
+        for <carlee.miller@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 09 Aug 2022 07:22:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of catherinebartholome@yahoo.com designates 66.163.189.146 as permitted sender) client-ip=66.163.189.146;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=jgnscQNl;
+       spf=pass (google.com: domain of catherinebartholome@yahoo.com designates 66.163.189.146 as permitted sender) smtp.mailfrom=catherinebartholome@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1660054964; bh=YAVd6bpy2dQzbeKY89TQQcdL1C+ermXAVArX2Bk3JO0=; h=From:Subject:Date:References:In-Reply-To:To:From:Subject:Reply-To; b=jgnscQNlb7VWcnr9HEOL8Fst5n2jcaWMZXV3CKuHRTNpsNXY/asXRsWomKyjKxH/H3dMdCceaZdDVqQU1HU23wLQuXUaUacwKqGSIWd7WJMFznVPlwC6hkVQuwBTVcOVbcLsbl8x1wQiy6nOErzzuXM5SBmomubQyE4Jadc4tCkLWdpyBRM5KPT2ZBn6VsqcuyXw6svsC7C0rA5agetUYtoYMkjRntvDnppBaXhoZSDBnrJjmsOyuSi+lvhOleHmp7+s7TJnk22/oX3tKFavpvJAqe4kjmuwmN2F5AAgL5LRfzpP/iiW1hrvk+nEzu25jQ1tQ+C+H862Esxe5Qci0w==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1660054964; bh=dIKeRGIv1UILS5cMKxHW+0v8M1gNmEh6rLr2jF/bj3X=; h=X-Sonic-MF:From:Subject:Date:To:From:Subject; b=XEoMQ8hCNOo6J9pYZ5bQ87ZfwXApOskirWg/BPgoEnzFmcOnGZTacpRcfDImkOpb0y9OVbPYpuXxhyicl5UvPRMvWXrL1bGNqp6hHcEM8WJO4LTHOjnv79yC1xIcu07Xb6K4brIn/m7VsUsM+rgz6yEHesx+xw1xUj1+odnU1SUi9Y6XnlvhKZk4tOG179NLkbt+vNZN17ktoc09IZNxBWWSdmLHRdcC7NIFgVVHglDee9DGcZCx5cOhu6aynoy58eAIeTdF2hZKUY6rxbxQ3xlXf43xg9An9D7FteXsnkoTfxV+AaR96UJiMRr4VGev2DnJ7+Iv1rYJm15uPjhz7g==
+X-YMail-OSG: HTdywX8VM1lOkfObOQA52Q87LPTlU5jCLGCSwY1dYUcp9fB.kd3WvhDMBMfJH_L
+ u3lB5rBno_9eNbOdU5QGWF9RDDTN2ZMhKu6HmAlsQ6hXdF.3oeAxPITEoTQ.M0l7LL4gJp32jkvf
+ .rBN.1uwHaYh6BlA2bfa5LLlZbBTx1qIvyN..EYmKgMBG7hVQyfuzJOE2mjuvXKMFjKb7YsoZqyW
+ kOlDmnkcHpdR3guzwoVCJnCJhjWZRy_b_.VKw6AlX3oZ27UUIVwM4IQ2wTQHBHBIsQd7wdDS_VId
+ 1NHpp5fQurj3eOlYEbmGaRFSHxBNedsYZMHTFoGSC5oYWdH5HXfC9m_Ifag2FxRqutRR3A5jIBAI
+ YR.djmTbfQ3FYGa6xaw24B6KMsqIaqdjnKbSa8ld7hBLPFzFVr4BUdIpZRRwcG9GlIIPBLzlv0xu
+ 02dNn.B0x9jAmmZrWDKY6vUAYeRhk8gqiA6dZqJxARHVDRVkyIbslm_MOicv9Fnfa9r4VW2PnLxx
+ 24l24O0WGhSpaqSdlslBUrKYACRGYLE9N_A92I9KHVMLPYX4YvZIJMMF8MzIlxF9y9.g_M2j3VQR
+ jHzEpSdX.7x8WK2mqJR_JZgdt1VVHnjS5Fe6X_8GwLnGyXbC.MctaapiXeEo1sSCddLzVHkOqL0A
+ d60f94puiq_sjhfsfrQXZzrtF_hgg08BaAJXVGYJ_XVJw9HmIxyTUSb4zTJi4oR8QZcyFBKuC1Ky
+ CUUdc722szNMr.S0W1ZvVab_fsVnav1g0a0mmuk9vMEGCUJJBYi_Q4nPHx_XlftO4x82izI5zvxZ
+ eD5LDC4rfTh9crJUV.RrZy1EbBQhGQHSpECRDdbOYLEr5luIlC75JmHEnEqmGh8ZuFEt8p3O3_6_
+ W9Kuy91one_AaW5TFkk8wRdz0d1QIieMbDWMDy_whilHRWBxpmUh8R.Iy1Cp4XBGNLyB9K5dapdz
+ lde4LqhG4Eh3BXq6Kz5F6ygRhnBKTruwbfijt4B2xp13gYQ4jvJte1txZOwle8TQQq9M6vZHuTCO
+ 3l6oCRC2vwc9jlMD41dXHSJK3TUUjYnBnPVRvtYP_EdFljc7l1wobwZYx0g9HOCovbnVLS0VrsIZ
+ z19CRkHztSHp64jVx0BIzwp50KwsqBje0FlssLDg.lEj0XHqWYuBjkoEEn97LajXKmNJidKY3X._
+ bvu5_DBWVCnZ3pZF49OTmAsy10BOFrEH6D5fHKCGOFOw.36Px9Z9bRdlbLhOfO5eOLylhP0bzyZT
+ ArMnJkxxLit_yz03c3.kbb8MpFvmsRPhJZ9zLCyM1XoQt5Hl1q2Ql6vFfZa1cbA2ViDDCZI_nHfa
+ egVxCELgouJRLJA.QBsFUFcem7JfETdYjMTryMehV36LJr9sE5.4Eg_p_Y5jh1voZ1JKnKDwY1k5
+ imjmR1F5MW6H7GfbX04Ar.6q0ZqEUqyZIeKdvYaoM26gob1fbfIvIKAnS7_JC7sKUWmB7RW6AQoS
+ m679k0u1Sj8SGhsgLqeMSa_z3Iltxra4NckK5i0npfr0QbTsAdM5qlF8aS370Pqqomb6xArOLkzz
+ TOrSnbWgmRltBF0i2KmQMTdIyAGZulIAEHkI9LxaXXIzwUB_GWl3q4OVNGZLcrwacUHKMtjETXDq
+ jvhHGZADyhMHA8QHyRuQ89FeDZ0GJRkkxpZNqPDELEvnC.GACGLu98dp_gwit497TSlLVoR50bMu
+ r77cAxjZ0dsUPsM1BFr33UZP3SBO_fbxaAb1jQxEje1EPOfbxA1x8L8jbFBdPAjjvfhKNcuNejPT
+ N1Nm8dZC6yAnnjbug07x1SRCfQ0eZQH2ykyOA7d._9qZ9d8pJuPqM87iF7Ab6c.95E7zYMtpmeNw
+ WNq.T8nblHRqHy0irQ6ULYp_PC0ag1HwiF060XO0mEE3GvMYnPgm8UUPlWXOHjFhCY2UwXWhzebq
+ V4j5WaP9Tefg729fvq40IKtxJGMYWzZzsY48dw4Btqg49wnCo0zXuyem6rP.d4dDFOTvbrNluOM9
+ KyfdIYf.yeMS9zIelOW.HxpuBnoYpGWKfYcF0KGfe01k2s7PC8ZRfdRrHjHWy8vWquXbDQCx5Q1s
+ ahhQML_7DOHaHYBnylD2nvvK3UXZrRszUNwBg6uPiUdmZM1j0XMFObej18Lv96sZhzbhw99cDsat
+ KUGsmK1BxvD2hilp6Nip0T.Har.MBh9e4xtkMno.Flydu1GJfoFvtZ9l.A3sGEooXNb_v1kJdjsR
+ Tn_0H18bDei53cainXMpY_Qzktq5Kh8WEtZ1TkPfmWOsFb5d54pvQqE0W.T_CbPmEJZiYElao1So
+ -
+X-Sonic-MF: <catherinebartholome@yahoo.com>
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic314.consmr.mail.ne1.yahoo.com with HTTP; Tue, 9 Aug 2022 14:22:44 +0000
+Received: by hermes--production-ne1-6649c47445-98ntq (Yahoo Inc. Hermes SMTP Server) with ESMTPA ID 8ecddc84e8a546bc5f167497b46d73d9;
+          Tue, 09 Aug 2022 14:22:40 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=Apple-Mail-0C30ADA8-A7AD-4950-AC80-7A3CCE935954
+Content-Transfer-Encoding: 7bit
+From: Catherine Bartholome <catherinebartholome@yahoo.com>
+Mime-Version: 1.0 (1.0)
+Subject: Re: Feedback, please!
+Date: Tue, 9 Aug 2022 09:22:39 -0500
+Message-Id: <4AB2ABF6-34E3-4469-8F24-5339AA9D9E06@yahoo.com>
+References: <CAJ37zxt8kjPG=CXHX3PoU4=g2dbsza9jr7KYbjiVB+wr_6P+Kw@mail.gmail.com>
+In-Reply-To: <CAJ37zxt8kjPG=CXHX3PoU4=g2dbsza9jr7KYbjiVB+wr_6P+Kw@mail.gmail.com>
+To: Carlee Miller <carlee.miller@gmail.com>
+X-Mailer: iPhone Mail (19G71)
+Content-Length: 3147
+
+
+--Apple-Mail-0C30ADA8-A7AD-4950-AC80-7A3CCE935954
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+I would make the text at the bottom darker they blend into the background. I=
+ would change the wording from being ignored to not receiving feeding back. A=
+lso change the wording hard to put into words for you skills to a unique set=
+ of skills that can benefit any company.=20
+
+Hope this helps. I like your layout=20
+Cathy=20
+
+Sent from my iPhone
+
+> On Aug 8, 2022, at 11:06 PM, Carlee Miller <carlee.miller@gmail.com> wrote=
+:
+>=20
+> =EF=BB=BF
+> Hello ladies!
+>=20
+> I need to have two more people give me feedback on my first iteration of m=
+y portfolio website. I know there are some things that need to be worked on,=
+ but I need to get other people's eyes on it to help me really finish it.
+>=20
+> Would you both take a look and let me know what you think? Be totally hone=
+st - I'm not at all attached to this portfolio - I just need to get somethin=
+g decent-looking turned in.
+>=20
+> https://carleemarie.github.io/UX_UI_HW_19/
+>=20
+> Thank you!
+>=20
+> Carlee
+
+--Apple-Mail-0C30ADA8-A7AD-4950-AC80-7A3CCE935954
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=3D=
+utf-8"></head><body dir=3D"auto">I would make the text at the bottom darker t=
+hey blend into the background. I would change the wording from being ignored=
+ to not receiving feeding back. Also change the wording hard to put into wor=
+ds for you skills to a unique set of skills that can benefit any company.&nb=
+sp;<div><br></div><div>Hope this helps. I like your layout&nbsp;</div><div>C=
+athy&nbsp;<br><br><div dir=3D"ltr">Sent from my iPhone</div><div dir=3D"ltr"=
+><br><blockquote type=3D"cite">On Aug 8, 2022, at 11:06 PM, Carlee Miller &l=
+t;carlee.miller@gmail.com&gt; wrote:<br><br></blockquote></div><blockquote t=
+ype=3D"cite"><div dir=3D"ltr">=EF=BB=BF<div dir=3D"ltr">Hello ladies!<div><b=
+r></div><div>I need to have two more people give me feedback on my first ite=
+ration of my portfolio website. I know there are some things that need to be=
+ worked on, but I need to get other people's eyes on it to help me really fi=
+nish it.</div><div><br></div><div>Would you both take a look and let me know=
+ what you think? Be totally honest - I'm not at all attached to this portfol=
+io - I just need to get something decent-looking turned in.</div><div><br></=
+div><div><span id=3D"gmail-docs-internal-guid-70f46e39-7fff-58e7-8d6c-475337=
+e6fe54"><a href=3D"https://carleemarie.github.io/UX_UI_HW_19/" style=3D"text=
+-decoration-line:none"><span style=3D"font-size:11pt;font-family:Calibri,san=
+s-serif;background-color:transparent;font-variant-numeric:normal;font-varian=
+t-east-asian:normal;text-decoration-line:underline;vertical-align:baseline;w=
+hite-space:pre-wrap">https://carleemarie.github.io/UX_UI_HW_19/</span></a></=
+span><br></div><div><br></div><div>Thank you!</div><div><br></div><div>Carle=
+e</div></div>
+</div></blockquote></div></body></html>=
+
+--Apple-Mail-0C30ADA8-A7AD-4950-AC80-7A3CCE935954--

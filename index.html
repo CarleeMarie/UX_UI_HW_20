@@ -15,12 +15,20 @@
 </head>
 <body>
   <!--Jumbotron from Bootstrap 4-->
-  <div class="jumbotron">
-    <h1 class="display-4">hey bestie!</h1>
-    <p class="lead">An app for women, by women, to find your new best friend.</p>
-    <img src="images/hb_intro_pic.png"
-        height="250px"
-        >
+  <div class="flex-container jumbotron">
+    <div class="image">
+      <img src="images/hb_intro_pic_1.png"
+      height="380px">
+    </div>
+    <div class="h1">
+      <h1 class="display-4">hey bestie!</h1>
+      <div class="byline">
+        <p class="lead">An app for women, by women, to find your new best friend.</p>
+      </div>
+    </div>
+    
+    
+    
       
      
     <!--hr class="my-4">
@@ -29,46 +37,62 @@
       <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </p-->
   </div>
-  
+  <div class="introduction">
+    <h2>Introduction</h2>
+  </div>
   <!--Vertical Navigation using BS4 Navs-->
-  <nav class="nav flex-column">
-    <a class="nav-link active" href="#">Introduction</a>
-    <a class="nav-link" href="#">Research
-    <a class="nav-link" href="#">Definition</a>
-    <a class="nav-link" href="#">Ideation</a>
-    <a class="nav-link" href="#">Testing & Iterations</a>
-    <a class="nav-link" href="#">Final Prototype</a>
-    <!--a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a-->
-  </nav>
-  <!--Main Content-->
-  <!--images added using Bootstrap4 Media Object-->
-  <!--Introduction using BS4 Card-->
-  <div class="card mb-3, introduction" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="images/isolation.png" class="card-img" alt="...">
+  <div class="row align-text-center">
+    <div class="col1">
+      <div class="nav-item">
+        <nav class="nav flex-column">
+          <a class="nav-link active" href="#">Introduction</a>
+          <a class="nav-link" href="#">Research
+          <a class="nav-link" href="#">Definition</a>
+          <a class="nav-link" href="#">Ideation</a>
+          <a class="nav-link" href="#">Testing & Iterations</a>
+          <a class="nav-link" href="#">Final Prototype</a>
+          <!--a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a-->
+        </nav>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">The Problem</h5>
-          <p class="card-text">Many women found their friendships had fallen apart after spending 
-            time in isolation and prioritizing work during the COVID-19 pandemic.</p>
-            <!--p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p-->
+    </div>
+    <!--Main Content-->
+    <!--images added using Bootstrap4 Media Object-->
+    <!--Introduction using BS4 Card-->
+    <div class="col2">
+      <div class="mb-3 intro-card" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col">
+            <img src="images/isolation.png" 
+            class="card-img"
+            width="400px"
+            height="267px" 
+            alt="...">
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <h5 class="card-title">The Problem</h5>
+              <p class="card-text">Many women found their friendships had fallen apart after spending 
+                time in isolation and prioritizing work during the COVID-19 pandemic.</p>
+                <!--p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p-->
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="images/hb_open_screen.png" class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-            <h5 class="card-title">The Solution</h5>
-            <p class="card-text">Bestie is an app that helps women connect with other women in 
-              their community alongside their busy lives.</p>
-            <!--p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p-->
+    <div class="col 3">
+      <div class="mb-3 solution-card" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col">
+            <img src="images/hb_open_screen.png" class="card-img" alt="...">
+          </div>
+          <div class="col">
+            <div class="card-body">
+                <h5 class="card-title">The Solution</h5>
+                <p class="card-text">Bestie is an app that helps women connect with other women in 
+                  their community alongside their busy lives.</p>
+                <!--p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p-->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -77,11 +101,23 @@
   <!--Research Section using BS4 Columns-->
   <div class="container, research">
     <div class="row justify-content-md-center">
-      <div class="col col-lg-2">
+      <div class="col col-lg-auto">
         <h2>Research</h2>
+        <p>We used Bumble and Tinder as our direct competitors and Facebook, Meetup, and Peanut as our indirect competitors. 
+
+          We understood that Tinder is the biggest dating app out there and one of the first
+          ones that had features such as swiping left or right, and super likes. Bumble
+          also has the feature to specifically meet friends on the app and we wanted to know
+          how users were interacting with that. 
+          
+          With an app like Facebook the whole point is to stay connected with friends and family, and
+          because it is such a large platform that so many people use, we knew there would be a
+          lot to look at.
+          </p>
       </div>
-      <div class="col-md-auto">
-        <img src="images/competitive_analysis.png">
+      <div class="col-lg">
+        <img src="images/competitive_analysis_resize.png"
+        height: 30%;>
       </div>
     </div>
     <div class="row justify-content-md-center">
@@ -96,8 +132,30 @@
       <div class="col">
         <img src="images/survey_results_resized.png">
       </div>
-      <div class="col-md-auto">
-        blurb about research plan & interview results
+      <div class="col-md-auto research">
+        THe first step in our research process was to brainstorm who the typical user of the hey bestie! app might be and
+        created a proto-persona.
+        
+        Andi is a general idea of who we thought might be interested in using an app that helps women make friends.
+        Next, we decided to conduct a survey online to see what women's general interest level was
+        for such an app. Extrapolating from that data, we came up with a research plan and conducted 6 interviews. 
+        
+        Research Plan
+        Here we decided we wanted to create and app that allows people to make friends. We came up with some questions that
+        pertain to our app idea, and then found an idea that we can create interview questions off of which was, “how do people
+        make friends.” Would you be interested in an app where you can make new friends?
+        
+        Do you use dating apps? If so, which app was the best?
+        
+        What was annoying about using dating apps. 
+        
+        Have you made any new friends through an app before? If so, which one?
+        
+        Are there struggles to making friends in your daily life.  After creating a plan we made a hypothesis about how user would feel about the importance of our app. 
+        “If people are able to easily connect with one another then they will feel more included in their community.""  
+        
+        Having that done the user research, we had a lot of data and were able to make a large affinity map that led to a thorough empathy map on which we based our user persona.
+        
       </div>
     </div>
     <div class="row justify-content-md-center">

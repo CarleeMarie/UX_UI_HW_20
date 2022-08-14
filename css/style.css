@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family:'Noto Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.jumbotron {
+    background-color: #ED32D5;
+    width: 100%;
+    height: 405px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0px 25px 0px 50px;
+}
+.jumbotron h1 {
+    font-size: 72px;
+}
+.jumbotron byline {
+    font-size: auto;
+}
+.introduction {
+    margin: 0px 62.5% 10px 37.5%;
+}
+.row {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+.col1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.col2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.col3 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+.nav-link {
+    padding: 5px;
+    font-size: 28px;
+}
+
+/*.col-md-auto research {
+    inline-size: 500px;
+}*/
